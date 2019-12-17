@@ -1,19 +1,21 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <ul>
       <li>
-        <a href="/">Home</a>
+        {/* 'to' will simply update the URL, but won't send additional request to server */}
+        <Link to="/">Home</Link>
       </li>
       <li>
-        <a href="/products">Products</a>
+        <Link to="/products">Products</Link>
       </li>
       <li>
-        <a href="/posts/2018/06">Posts</a>
+        <Link to="/posts/2018/06">Posts</Link>
       </li>
       <li>
-        <a href="/admin">Admin</a>
+        <Link to="/admin">Admin</Link>
       </li>
     </ul>
   );
