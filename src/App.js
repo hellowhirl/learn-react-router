@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import NavBar from "./components/navbar";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import Products from "./components/products";
 import Posts from "./components/posts";
 import Home from "./components/home";
@@ -25,10 +25,13 @@ class App extends Component {
             />
             {/* '?' mean that parameter is optional */}
             <Route path="/posts/:year?/:month?" component={Posts} />
+            <Redirect from="/messages" to="/posts" />
             <Route path="/admin" component={Dashboard} />
-            <Route path="/" component={Home} />
+            <Route path="/not-found" component={NotFound} />
+            <Route path="/" exact component={Home} />
             {/* another way besides <Switch> is to set the home page with '/' is to use 'exact'
             /* <Route path="/" exact component={Home} /> */}
+            <Redirect to="/not-found" />
           </Switch>
         </div>
       </div>
