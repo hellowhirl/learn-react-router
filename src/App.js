@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import NavBar from "./components/navbar";
+import NavBar from "./components/navBar";
 import { Route, Switch, Redirect } from "react-router-dom";
 import Products from "./components/products";
 import Posts from "./components/posts";
@@ -15,7 +15,7 @@ class App extends Component {
       <div>
         <NavBar />
         <div className="content">
-          {/* the Switch will render the first child that matches the location */}
+          {/* the Switch will render the first child that matches the location path */}
           <Switch>
             {/* define paramters by prefixing with ':' in 'path' */}
             <Route path="/products/:id" component={ProductDetails} />
