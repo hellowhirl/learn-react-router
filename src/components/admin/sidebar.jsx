@@ -8,7 +8,7 @@ const SideBar = () => {
         <Link to="/admin/posts">Posts</Link>
       </li>
       <li>
-        <Link to="/admin/user">Users</Link>
+        <Link to="/admin/users">Users</Link>
       </li>
     </ul>
   );
