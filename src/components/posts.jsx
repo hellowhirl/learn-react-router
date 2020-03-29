@@ -4,7 +4,7 @@ import queryString from "query-string";
 const Posts = ({ match, location }) => {
   const result = queryString.parse(location.search);
   console.log(result);
-  // For example: http://localhost:3000/posts/2018/06?yo=lo&hey=ho&destructured=test
+  // For example: http://localhost:3000/posts/2018/06?destructured=test&hey=dude
   const { destructured } = queryString.parse(location.search);
   console.log(destructured);
 
